@@ -1,0 +1,225 @@
+\begin{frame}{Цель работы}
+\phantomsection\label{ux446ux435ux43bux44c-ux440ux430ux431ux43eux442ux44b}
+Настроить рабочее пространство для лабораторной работы. Изучить систему
+контроля версий Git и язык разметки Markdown.
+\end{frame}
+
+\begin{frame}{Задание}
+\phantomsection\label{ux437ux430ux434ux430ux43dux438ux435}
+Склонировать репозиторий. При помощи Make сконвертировать из файла .md
+файлы отчетов в форматах docx и pdf.
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b}
+Для начала мы скачали ресурсы pandoc и make через PowerShell, а также
+установили LaTex. (Рис. 1-3).
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/2.png}
+\caption{Установка Pandoc}\label{fig:001}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-1}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/1.png}
+\caption{Установка Make}\label{fig:002}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Выполнение лабораторной работы}
+\phantomsection\label{ux432ux44bux43fux43eux43bux43dux435ux43dux438ux435-ux43bux430ux431ux43eux440ux430ux442ux43eux440ux43dux43eux439-ux440ux430ux431ux43eux442ux44b-2}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/12.png}
+\caption{Установка LaTex}\label{fig:012}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Создание репозитория курса на основе шаблона}
+\phantomsection\label{ux441ux43eux437ux434ux430ux43dux438ux435-ux440ux435ux43fux43eux437ux438ux442ux43eux440ux438ux44f-ux43aux443ux440ux441ux430-ux43dux430-ux43eux441ux43dux43eux432ux435-ux448ux430ux431ux43bux43eux43dux430}
+Репозиторий на основе шаблона можно создать либо вручную, через
+web-интерфейс, либо с помощью утилит gh. Мы проделовали с помощью утилит
+gh. (Рис. 4-7).
+
+Например, для 2023--2024 учебного года и предмета «Математическое
+моделирование» (аббревиатура предмета --- mathmod) создание репозитория
+примет следующий вид:
+
+mkdir -p \textasciitilde/work/study/2023-2024/``Математическое
+моделирование''
+
+cd \textasciitilde/work/study/2023-2024/``Математическое моделирование''
+
+gh repo create study\_2023-2024\_mathmod --template=yamadharma
+course-directory-student-template --public
+
+git clone --recursive git@github.com:andullina
+LR/study\_2023-2024\_mathmod.git mathmod
+\end{frame}
+
+\begin{frame}{Создание репозитория курса на основе шаблона}
+\phantomsection\label{ux441ux43eux437ux434ux430ux43dux438ux435-ux440ux435ux43fux43eux437ux438ux442ux43eux440ux438ux44f-ux43aux443ux440ux441ux430-ux43dux430-ux43eux441ux43dux43eux432ux435-ux448ux430ux431ux43bux43eux43dux430-1}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/4.png}
+\caption{Создание и клонирование репозитория}\label{fig:003}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Создание репозитория курса на основе шаблона}
+\phantomsection\label{ux441ux43eux437ux434ux430ux43dux438ux435-ux440ux435ux43fux43eux437ux438ux442ux43eux440ux438ux44f-ux43aux443ux440ux441ux430-ux43dux430-ux43eux441ux43dux43eux432ux435-ux448ux430ux431ux43bux43eux43dux430-2}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/3.png}
+\caption{Успешное создание репозитория на гитхабе}\label{fig:004}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Создание репозитория курса на основе шаблона}
+\phantomsection\label{ux441ux43eux437ux434ux430ux43dux438ux435-ux440ux435ux43fux43eux437ux438ux442ux43eux440ux438ux44f-ux43aux443ux440ux441ux430-ux43dux430-ux43eux441ux43dux43eux432ux435-ux448ux430ux431ux43bux43eux43dux430-3}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/5.png}
+\caption{Успешное клонирование элементов репозитория на
+гитхабе}\label{fig:005}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Создание репозитория курса на основе шаблона}
+\phantomsection\label{ux441ux43eux437ux434ux430ux43dux438ux435-ux440ux435ux43fux43eux437ux438ux442ux43eux440ux438ux44f-ux43aux443ux440ux441ux430-ux43dux430-ux43eux441ux43dux43eux432ux435-ux448ux430ux431ux43bux43eux43dux430-4}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/6.png}
+\caption{Успешное клонирование элементов репозитория на
+ПК}\label{fig:006}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Настройка каталога курса}
+\phantomsection\label{ux43dux430ux441ux442ux440ux43eux439ux43aux430-ux43aux430ux442ux430ux43bux43eux433ux430-ux43aux443ux440ux441ux430}
+Перешли в каталог курса:
+
+cd \textasciitilde/work/study/2023-2024/``Математическое
+моделирование''/mathmod
+
+Удалили лишние файлы:
+
+rm package.json
+
+Зашли в msys2 и прописали следующие команды(Рис. 8-9):
+
+echo mathmod \textgreater{} COURSE
+
+make prepare
+\end{frame}
+
+\begin{frame}{Настройка каталога курса}
+\phantomsection\label{ux43dux430ux441ux442ux440ux43eux439ux43aux430-ux43aux430ux442ux430ux43bux43eux433ux430-ux43aux443ux440ux441ux430-1}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/7.png}
+\caption{Использование msys2 для выполнения команды make
+prepare}\label{fig:007}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Настройка каталога курса}
+\phantomsection\label{ux43dux430ux441ux442ux440ux43eux439ux43aux430-ux43aux430ux442ux430ux43bux43eux433ux430-ux43aux443ux440ux441ux430-2}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/8.png}
+\caption{Успешное добавление элементов labs на ПК}\label{fig:008}
+\end{figure}
+
+Таким образом добавили папку labs со всем ее содержимым. Далее запушили
+все изменения на гитхаб (Рис. 10-12).
+
+Отправляем файлы на сервер:
+
+git add .
+
+git commit -am `feat(main): make course structure'
+
+git push
+\end{frame}
+
+\begin{frame}{Настройка каталога курса}
+\phantomsection\label{ux43dux430ux441ux442ux440ux43eux439ux43aux430-ux43aux430ux442ux430ux43bux43eux433ux430-ux43aux443ux440ux441ux430-3}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/10.png}
+\caption{Добавление информации на гитхаб}\label{fig:010}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Настройка каталога курса}
+\phantomsection\label{ux43dux430ux441ux442ux440ux43eux439ux43aux430-ux43aux430ux442ux430ux43bux43eux433ux430-ux43aux443ux440ux441ux430-4}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/11.png}
+\caption{Добавление информации на гитхаб}\label{fig:011}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Настройка каталога курса}
+\phantomsection\label{ux43dux430ux441ux442ux440ux43eux439ux43aux430-ux43aux430ux442ux430ux43bux43eux433ux430-ux43aux443ux440ux441ux430-5}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/9.png}
+\caption{Успешное добавление элементов labs в гитхаб}\label{fig:009}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Конвертирование из Markdown}
+\phantomsection\label{ux43aux43eux43dux432ux435ux440ux442ux438ux440ux43eux432ux430ux43dux438ux435-ux438ux437-markdown}
+Осталось лишь конвертировать наш отчет в форматы pdf и docx с помощью
+команд (Рис. 13-16):
+
+pandoc report.md -o report. --pdf-engine=lualatex -V mainfont=``Times
+New Roman'' -V sansfont=``DejaVu Sans'' -V monofont=``DejaVu Sans Mono''
+
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/14.png}
+\caption{Конвертация через PowerShell}\label{fig:015}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Конвертирование из Markdown}
+\phantomsection\label{ux43aux43eux43dux432ux435ux440ux442ux438ux440ux43eux432ux430ux43dux438ux435-ux438ux437-markdown-1}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/15.png}
+\caption{Успешное конвертирование}\label{fig:016}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Конвертирование из Markdown}
+\phantomsection\label{ux43aux43eux43dux432ux435ux440ux442ux438ux440ux43eux432ux430ux43dux438ux435-ux438ux437-markdown-2}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/16.png}
+\caption{Успешное конвертирование в docx формат}\label{fig:017}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Конвертирование из Markdown}
+\phantomsection\label{ux43aux43eux43dux432ux435ux440ux442ux438ux440ux43eux432ux430ux43dux438ux435-ux438ux437-markdown-3}
+\begin{figure}
+\centering
+\includegraphics[width=0.7\textwidth,height=\textheight]{image/17.png}
+\caption{Успешное конвертирование в pdf}\label{fig:018}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Выводы}
+\phantomsection\label{ux432ux44bux432ux43eux434ux44b}
+Мы смогли настроить рабочее пространство для лабораторной работы.
+Изучили систему контроля версий Git и язык разметки Markdown, атакже
+выполнили поставленне задачи.
+\end{frame}
